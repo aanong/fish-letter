@@ -6,8 +6,12 @@ import com.aihaibara.commons.bean.User;
 import com.aihaibara.server.protoBuilder.LoginResponceBuilder;
 import com.aihaibara.server.server.ServerSession;
 import com.aihaibara.server.server.SessionMap;
+import io.netty.channel.ChannelHandler;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+
+@Service("LoginProcesser")
 public class LoginProcesser extends AbstractServerProcesser {
     @Autowired
     private LoginResponceBuilder loginResponceBuilder;
@@ -23,33 +27,33 @@ public class LoginProcesser extends AbstractServerProcesser {
         User user = User.fromMsg(loginRequest);
 
         //检查用户
-//        boolean isValidUser = checkUser(user);
-//        if (!isValidUser) {
-//            ProtoInstant.ResultCodeEnum resultcode =
-//                    ProtoInstant.ResultCodeEnum.NO_TOKEN;
-//            //构造登录失败的报文
-//            ProtoMsg.Message response =
-//                    loginResponceBuilder.loginResponce(resultcode, sequence, "-1");
-//            //发送登录失败的报文
-//            session.writeAndFlush(response);
-//            return false;
-//        }
-//
-//        session.setUser(user);
-//
-//        session.bind();
-//
-//        // sessionManger.addLocalSession(session);
-//
-//        //登录成功
-//        ProtoInstant.ResultCodeEnum resultcode =
-//                ProtoInstant.ResultCodeEnum.SUCCESS;
-//        //构造登录成功的报文
-//        ProtoMsg.Message response =
-//                loginResponceBuilder.loginResponce(
-//                        resultcode, seqNo, session.getSessionId());
-//        //发送登录成功的报文
-//        session.writeAndFlush(response);
+        boolean isValidUser = checkUser(user);
+        if (!isValidUser) {
+            ProtoInstant.ResultCodeEnum resultcode =
+                    ProtoInstant.ResultCodeEnum.NO_TOKEN;
+            //构造登录失败的报文
+            ProtoMsg.Message response =
+                    loginResponceBuilder.loginResponce(resultcode, sequence, "-1");
+            //发送登录失败的报文
+            session.writeAndFlush(response);
+            return false;
+        }
+
+        session.setUser(user);
+
+        session.bind();
+
+        // sessionManger.addLocalSession(session);
+
+        //登录成功
+        ProtoInstant.ResultCodeEnum resultcode =
+                ProtoInstant.ResultCodeEnum.SUCCESS;
+        //构造登录成功的报文
+        ProtoMsg.Message response =
+                loginResponceBuilder.loginResponce(
+                        resultcode, sequence, session.getSessionId());
+        //发送登录成功的报文
+        session.writeAndFlush(response);
         return true;
     }
 
