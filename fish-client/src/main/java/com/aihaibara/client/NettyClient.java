@@ -4,6 +4,7 @@ package com.aihaibara.client;
 import com.aihaibara.commons.codec.ProtobufDecoder;
 import com.aihaibara.commons.codec.ProtobufEncoder;
 import com.aihaibara.handler.ChatMsgHandler;
+import com.aihaibara.handler.ExceptionHandler;
 import com.aihaibara.handler.LoginResponceHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
@@ -36,10 +37,10 @@ public class NettyClient  {
 
     @Autowired
     private LoginResponceHandler loginResponceHandler;
-//
-//
-//    @Autowired
-//    private ExceptionHandler exceptionHandler;
+
+
+    @Autowired
+    private ExceptionHandler exceptionHandler;
 //
 //
 //    private Channel channel;

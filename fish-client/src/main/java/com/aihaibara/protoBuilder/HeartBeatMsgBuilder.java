@@ -13,13 +13,14 @@ public class HeartBeatMsgBuilder extends BaseBuilder {
     }
 
     public ProtoMsg.Message buildMsg() {
-//        ProtoMsg.Message message = buildCommon(-1);
-//        ProtoMsg.Message.Builder lb =
-//                ProtoMsg.MessageHeartBeat.newBuilder()
-//                        .setSeq(0)
-//                        .setJson("{\"from\":\"client\"}")
-//                        .setUid(user.getUid());
-//        return message.toBuilder().setHeartBeat(lb).build();
-        return null;
+        ProtoMsg.Message message = buildCommon(-1);
+        ProtoMsg.HeatbeatRequest.Builder lb =
+                ProtoMsg.HeatbeatRequest.newBuilder()
+                        .setSeq(0)
+                        .setJson("{\"from\":\"client\"}")
+                        .setUid(user.getUid());
+//        message.toBuilder().set
+        return message.toBuilder().setHeatbeatRequest(lb).build();
+
     }
 }

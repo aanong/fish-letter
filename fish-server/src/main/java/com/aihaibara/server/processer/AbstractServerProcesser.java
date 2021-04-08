@@ -1,6 +1,5 @@
 package com.aihaibara.server.processer;
 
-import com.aihaibara.commons.ProtoMsg;
 import com.aihaibara.server.server.ServerSession;
 import io.netty.channel.Channel;
 

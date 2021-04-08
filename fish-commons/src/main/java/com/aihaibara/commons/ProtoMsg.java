@@ -153,6 +153,1476 @@ public final class ProtoMsg {
     // @@protoc_insertion_point(enum_scope:HeadType)
   }
 
+  public interface HeatbeatRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:HeatbeatRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required uint32 seq = 1;</code>
+     */
+    boolean hasSeq();
+    /**
+     * <code>required uint32 seq = 1;</code>
+     */
+    int getSeq();
+
+    /**
+     * <code>required string uid = 2;</code>
+     */
+    boolean hasUid();
+    /**
+     * <code>required string uid = 2;</code>
+     */
+    java.lang.String getUid();
+    /**
+     * <code>required string uid = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getUidBytes();
+
+    /**
+     * <code>required string json = 3;</code>
+     */
+    boolean hasJson();
+    /**
+     * <code>required string json = 3;</code>
+     */
+    java.lang.String getJson();
+    /**
+     * <code>required string json = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getJsonBytes();
+  }
+  /**
+   * Protobuf type {@code HeatbeatRequest}
+   */
+  public static final class HeatbeatRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:HeatbeatRequest)
+      HeatbeatRequestOrBuilder {
+    // Use HeatbeatRequest.newBuilder() to construct.
+    private HeatbeatRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private HeatbeatRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final HeatbeatRequest defaultInstance;
+    public static HeatbeatRequest getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public HeatbeatRequest getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HeatbeatRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              seq_ = input.readUInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              uid_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              json_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aihaibara.commons.ProtoMsg.internal_static_HeatbeatRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aihaibara.commons.ProtoMsg.internal_static_HeatbeatRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aihaibara.commons.ProtoMsg.HeatbeatRequest.class, com.aihaibara.commons.ProtoMsg.HeatbeatRequest.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<HeatbeatRequest> PARSER =
+        new com.google.protobuf.AbstractParser<HeatbeatRequest>() {
+      public HeatbeatRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HeatbeatRequest(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HeatbeatRequest> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int SEQ_FIELD_NUMBER = 1;
+    private int seq_;
+    /**
+     * <code>required uint32 seq = 1;</code>
+     */
+    public boolean hasSeq() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required uint32 seq = 1;</code>
+     */
+    public int getSeq() {
+      return seq_;
+    }
+
+    public static final int UID_FIELD_NUMBER = 2;
+    private java.lang.Object uid_;
+    /**
+     * <code>required string uid = 2;</code>
+     */
+    public boolean hasUid() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string uid = 2;</code>
+     */
+    public java.lang.String getUid() {
+      java.lang.Object ref = uid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          uid_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string uid = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUidBytes() {
+      java.lang.Object ref = uid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JSON_FIELD_NUMBER = 3;
+    private java.lang.Object json_;
+    /**
+     * <code>required string json = 3;</code>
+     */
+    public boolean hasJson() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required string json = 3;</code>
+     */
+    public java.lang.String getJson() {
+      java.lang.Object ref = json_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          json_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string json = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getJsonBytes() {
+      java.lang.Object ref = json_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        json_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      seq_ = 0;
+      uid_ = "";
+      json_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasSeq()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasUid()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasJson()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, seq_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getUidBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getJsonBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, seq_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getUidBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getJsonBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.aihaibara.commons.ProtoMsg.HeatbeatRequest prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code HeatbeatRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:HeatbeatRequest)
+        com.aihaibara.commons.ProtoMsg.HeatbeatRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aihaibara.commons.ProtoMsg.internal_static_HeatbeatRequest_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aihaibara.commons.ProtoMsg.internal_static_HeatbeatRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aihaibara.commons.ProtoMsg.HeatbeatRequest.class, com.aihaibara.commons.ProtoMsg.HeatbeatRequest.Builder.class);
+      }
+
+      // Construct using com.aihaibara.commons.ProtoMsg.HeatbeatRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        seq_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        uid_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        json_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aihaibara.commons.ProtoMsg.internal_static_HeatbeatRequest_descriptor;
+      }
+
+      public com.aihaibara.commons.ProtoMsg.HeatbeatRequest getDefaultInstanceForType() {
+        return com.aihaibara.commons.ProtoMsg.HeatbeatRequest.getDefaultInstance();
+      }
+
+      public com.aihaibara.commons.ProtoMsg.HeatbeatRequest build() {
+        com.aihaibara.commons.ProtoMsg.HeatbeatRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.aihaibara.commons.ProtoMsg.HeatbeatRequest buildPartial() {
+        com.aihaibara.commons.ProtoMsg.HeatbeatRequest result = new com.aihaibara.commons.ProtoMsg.HeatbeatRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.seq_ = seq_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.uid_ = uid_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.json_ = json_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aihaibara.commons.ProtoMsg.HeatbeatRequest) {
+          return mergeFrom((com.aihaibara.commons.ProtoMsg.HeatbeatRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aihaibara.commons.ProtoMsg.HeatbeatRequest other) {
+        if (other == com.aihaibara.commons.ProtoMsg.HeatbeatRequest.getDefaultInstance()) return this;
+        if (other.hasSeq()) {
+          setSeq(other.getSeq());
+        }
+        if (other.hasUid()) {
+          bitField0_ |= 0x00000002;
+          uid_ = other.uid_;
+          onChanged();
+        }
+        if (other.hasJson()) {
+          bitField0_ |= 0x00000004;
+          json_ = other.json_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasSeq()) {
+          
+          return false;
+        }
+        if (!hasUid()) {
+          
+          return false;
+        }
+        if (!hasJson()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.aihaibara.commons.ProtoMsg.HeatbeatRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.aihaibara.commons.ProtoMsg.HeatbeatRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int seq_ ;
+      /**
+       * <code>required uint32 seq = 1;</code>
+       */
+      public boolean hasSeq() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required uint32 seq = 1;</code>
+       */
+      public int getSeq() {
+        return seq_;
+      }
+      /**
+       * <code>required uint32 seq = 1;</code>
+       */
+      public Builder setSeq(int value) {
+        bitField0_ |= 0x00000001;
+        seq_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required uint32 seq = 1;</code>
+       */
+      public Builder clearSeq() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        seq_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uid_ = "";
+      /**
+       * <code>required string uid = 2;</code>
+       */
+      public boolean hasUid() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string uid = 2;</code>
+       */
+      public java.lang.String getUid() {
+        java.lang.Object ref = uid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            uid_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string uid = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUidBytes() {
+        java.lang.Object ref = uid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string uid = 2;</code>
+       */
+      public Builder setUid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        uid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string uid = 2;</code>
+       */
+      public Builder clearUid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        uid_ = getDefaultInstance().getUid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string uid = 2;</code>
+       */
+      public Builder setUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        uid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object json_ = "";
+      /**
+       * <code>required string json = 3;</code>
+       */
+      public boolean hasJson() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string json = 3;</code>
+       */
+      public java.lang.String getJson() {
+        java.lang.Object ref = json_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            json_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string json = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getJsonBytes() {
+        java.lang.Object ref = json_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          json_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string json = 3;</code>
+       */
+      public Builder setJson(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        json_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string json = 3;</code>
+       */
+      public Builder clearJson() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        json_ = getDefaultInstance().getJson();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string json = 3;</code>
+       */
+      public Builder setJsonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        json_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:HeatbeatRequest)
+    }
+
+    static {
+      defaultInstance = new HeatbeatRequest(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:HeatbeatRequest)
+  }
+
+  public interface HeatbeatResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:HeatbeatResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required uint32 seq = 1;</code>
+     */
+    boolean hasSeq();
+    /**
+     * <code>required uint32 seq = 1;</code>
+     */
+    int getSeq();
+
+    /**
+     * <code>required string uid = 2;</code>
+     */
+    boolean hasUid();
+    /**
+     * <code>required string uid = 2;</code>
+     */
+    java.lang.String getUid();
+    /**
+     * <code>required string uid = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getUidBytes();
+
+    /**
+     * <code>required string json = 3;</code>
+     */
+    boolean hasJson();
+    /**
+     * <code>required string json = 3;</code>
+     */
+    java.lang.String getJson();
+    /**
+     * <code>required string json = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getJsonBytes();
+  }
+  /**
+   * Protobuf type {@code HeatbeatResponse}
+   */
+  public static final class HeatbeatResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:HeatbeatResponse)
+      HeatbeatResponseOrBuilder {
+    // Use HeatbeatResponse.newBuilder() to construct.
+    private HeatbeatResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private HeatbeatResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final HeatbeatResponse defaultInstance;
+    public static HeatbeatResponse getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public HeatbeatResponse getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HeatbeatResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              seq_ = input.readUInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              uid_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              json_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aihaibara.commons.ProtoMsg.internal_static_HeatbeatResponse_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aihaibara.commons.ProtoMsg.internal_static_HeatbeatResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aihaibara.commons.ProtoMsg.HeatbeatResponse.class, com.aihaibara.commons.ProtoMsg.HeatbeatResponse.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<HeatbeatResponse> PARSER =
+        new com.google.protobuf.AbstractParser<HeatbeatResponse>() {
+      public HeatbeatResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HeatbeatResponse(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HeatbeatResponse> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int SEQ_FIELD_NUMBER = 1;
+    private int seq_;
+    /**
+     * <code>required uint32 seq = 1;</code>
+     */
+    public boolean hasSeq() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required uint32 seq = 1;</code>
+     */
+    public int getSeq() {
+      return seq_;
+    }
+
+    public static final int UID_FIELD_NUMBER = 2;
+    private java.lang.Object uid_;
+    /**
+     * <code>required string uid = 2;</code>
+     */
+    public boolean hasUid() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string uid = 2;</code>
+     */
+    public java.lang.String getUid() {
+      java.lang.Object ref = uid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          uid_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string uid = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUidBytes() {
+      java.lang.Object ref = uid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JSON_FIELD_NUMBER = 3;
+    private java.lang.Object json_;
+    /**
+     * <code>required string json = 3;</code>
+     */
+    public boolean hasJson() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required string json = 3;</code>
+     */
+    public java.lang.String getJson() {
+      java.lang.Object ref = json_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          json_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string json = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getJsonBytes() {
+      java.lang.Object ref = json_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        json_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      seq_ = 0;
+      uid_ = "";
+      json_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasSeq()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasUid()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasJson()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, seq_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getUidBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getJsonBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, seq_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getUidBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getJsonBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.aihaibara.commons.ProtoMsg.HeatbeatResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.aihaibara.commons.ProtoMsg.HeatbeatResponse prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code HeatbeatResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:HeatbeatResponse)
+        com.aihaibara.commons.ProtoMsg.HeatbeatResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aihaibara.commons.ProtoMsg.internal_static_HeatbeatResponse_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aihaibara.commons.ProtoMsg.internal_static_HeatbeatResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aihaibara.commons.ProtoMsg.HeatbeatResponse.class, com.aihaibara.commons.ProtoMsg.HeatbeatResponse.Builder.class);
+      }
+
+      // Construct using com.aihaibara.commons.ProtoMsg.HeatbeatResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        seq_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        uid_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        json_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aihaibara.commons.ProtoMsg.internal_static_HeatbeatResponse_descriptor;
+      }
+
+      public com.aihaibara.commons.ProtoMsg.HeatbeatResponse getDefaultInstanceForType() {
+        return com.aihaibara.commons.ProtoMsg.HeatbeatResponse.getDefaultInstance();
+      }
+
+      public com.aihaibara.commons.ProtoMsg.HeatbeatResponse build() {
+        com.aihaibara.commons.ProtoMsg.HeatbeatResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.aihaibara.commons.ProtoMsg.HeatbeatResponse buildPartial() {
+        com.aihaibara.commons.ProtoMsg.HeatbeatResponse result = new com.aihaibara.commons.ProtoMsg.HeatbeatResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.seq_ = seq_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.uid_ = uid_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.json_ = json_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aihaibara.commons.ProtoMsg.HeatbeatResponse) {
+          return mergeFrom((com.aihaibara.commons.ProtoMsg.HeatbeatResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aihaibara.commons.ProtoMsg.HeatbeatResponse other) {
+        if (other == com.aihaibara.commons.ProtoMsg.HeatbeatResponse.getDefaultInstance()) return this;
+        if (other.hasSeq()) {
+          setSeq(other.getSeq());
+        }
+        if (other.hasUid()) {
+          bitField0_ |= 0x00000002;
+          uid_ = other.uid_;
+          onChanged();
+        }
+        if (other.hasJson()) {
+          bitField0_ |= 0x00000004;
+          json_ = other.json_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasSeq()) {
+          
+          return false;
+        }
+        if (!hasUid()) {
+          
+          return false;
+        }
+        if (!hasJson()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.aihaibara.commons.ProtoMsg.HeatbeatResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.aihaibara.commons.ProtoMsg.HeatbeatResponse) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int seq_ ;
+      /**
+       * <code>required uint32 seq = 1;</code>
+       */
+      public boolean hasSeq() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required uint32 seq = 1;</code>
+       */
+      public int getSeq() {
+        return seq_;
+      }
+      /**
+       * <code>required uint32 seq = 1;</code>
+       */
+      public Builder setSeq(int value) {
+        bitField0_ |= 0x00000001;
+        seq_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required uint32 seq = 1;</code>
+       */
+      public Builder clearSeq() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        seq_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uid_ = "";
+      /**
+       * <code>required string uid = 2;</code>
+       */
+      public boolean hasUid() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string uid = 2;</code>
+       */
+      public java.lang.String getUid() {
+        java.lang.Object ref = uid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            uid_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string uid = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUidBytes() {
+        java.lang.Object ref = uid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string uid = 2;</code>
+       */
+      public Builder setUid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        uid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string uid = 2;</code>
+       */
+      public Builder clearUid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        uid_ = getDefaultInstance().getUid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string uid = 2;</code>
+       */
+      public Builder setUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        uid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object json_ = "";
+      /**
+       * <code>required string json = 3;</code>
+       */
+      public boolean hasJson() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string json = 3;</code>
+       */
+      public java.lang.String getJson() {
+        java.lang.Object ref = json_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            json_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string json = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getJsonBytes() {
+        java.lang.Object ref = json_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          json_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string json = 3;</code>
+       */
+      public Builder setJson(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        json_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string json = 3;</code>
+       */
+      public Builder clearJson() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        json_ = getDefaultInstance().getJson();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string json = 3;</code>
+       */
+      public Builder setJsonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        json_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:HeatbeatResponse)
+    }
+
+    static {
+      defaultInstance = new HeatbeatResponse(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:HeatbeatResponse)
+  }
+
   public interface LoginRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:LoginRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -5458,28 +6928,54 @@ public final class ProtoMsg {
     com.aihaibara.commons.ProtoMsg.MessageRequestOrBuilder getMessageRequestOrBuilder();
 
     /**
-     * <code>optional .MessageResponse messageResponse = 7;</code>
+     * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+     */
+    boolean hasHeatbeatRequest();
+    /**
+     * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+     */
+    com.aihaibara.commons.ProtoMsg.HeatbeatRequest getHeatbeatRequest();
+    /**
+     * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+     */
+    com.aihaibara.commons.ProtoMsg.HeatbeatRequestOrBuilder getHeatbeatRequestOrBuilder();
+
+    /**
+     * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+     */
+    boolean hasHeatbeatResponse();
+    /**
+     * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+     */
+    com.aihaibara.commons.ProtoMsg.HeatbeatResponse getHeatbeatResponse();
+    /**
+     * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+     */
+    com.aihaibara.commons.ProtoMsg.HeatbeatResponseOrBuilder getHeatbeatResponseOrBuilder();
+
+    /**
+     * <code>optional .MessageResponse messageResponse = 9;</code>
      */
     boolean hasMessageResponse();
     /**
-     * <code>optional .MessageResponse messageResponse = 7;</code>
+     * <code>optional .MessageResponse messageResponse = 9;</code>
      */
     com.aihaibara.commons.ProtoMsg.MessageResponse getMessageResponse();
     /**
-     * <code>optional .MessageResponse messageResponse = 7;</code>
+     * <code>optional .MessageResponse messageResponse = 9;</code>
      */
     com.aihaibara.commons.ProtoMsg.MessageResponseOrBuilder getMessageResponseOrBuilder();
 
     /**
-     * <code>optional .MessageNotification notification = 8;</code>
+     * <code>optional .MessageNotification notification = 10;</code>
      */
     boolean hasNotification();
     /**
-     * <code>optional .MessageNotification notification = 8;</code>
+     * <code>optional .MessageNotification notification = 10;</code>
      */
     com.aihaibara.commons.ProtoMsg.MessageNotification getNotification();
     /**
-     * <code>optional .MessageNotification notification = 8;</code>
+     * <code>optional .MessageNotification notification = 10;</code>
      */
     com.aihaibara.commons.ProtoMsg.MessageNotificationOrBuilder getNotificationOrBuilder();
   }
@@ -5597,8 +7093,34 @@ public final class ProtoMsg {
               break;
             }
             case 58: {
-              com.aihaibara.commons.ProtoMsg.MessageResponse.Builder subBuilder = null;
+              com.aihaibara.commons.ProtoMsg.HeatbeatRequest.Builder subBuilder = null;
               if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = heatbeatRequest_.toBuilder();
+              }
+              heatbeatRequest_ = input.readMessage(com.aihaibara.commons.ProtoMsg.HeatbeatRequest.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(heatbeatRequest_);
+                heatbeatRequest_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
+              break;
+            }
+            case 66: {
+              com.aihaibara.commons.ProtoMsg.HeatbeatResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000080) == 0x00000080)) {
+                subBuilder = heatbeatResponse_.toBuilder();
+              }
+              heatbeatResponse_ = input.readMessage(com.aihaibara.commons.ProtoMsg.HeatbeatResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(heatbeatResponse_);
+                heatbeatResponse_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000080;
+              break;
+            }
+            case 74: {
+              com.aihaibara.commons.ProtoMsg.MessageResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000100) == 0x00000100)) {
                 subBuilder = messageResponse_.toBuilder();
               }
               messageResponse_ = input.readMessage(com.aihaibara.commons.ProtoMsg.MessageResponse.PARSER, extensionRegistry);
@@ -5606,12 +7128,12 @@ public final class ProtoMsg {
                 subBuilder.mergeFrom(messageResponse_);
                 messageResponse_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000100;
               break;
             }
-            case 66: {
+            case 82: {
               com.aihaibara.commons.ProtoMsg.MessageNotification.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000080) == 0x00000080)) {
+              if (((bitField0_ & 0x00000200) == 0x00000200)) {
                 subBuilder = notification_.toBuilder();
               }
               notification_ = input.readMessage(com.aihaibara.commons.ProtoMsg.MessageNotification.PARSER, extensionRegistry);
@@ -5619,7 +7141,7 @@ public final class ProtoMsg {
                 subBuilder.mergeFrom(notification_);
                 notification_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000200;
               break;
             }
           }
@@ -5797,43 +7319,85 @@ public final class ProtoMsg {
       return messageRequest_;
     }
 
-    public static final int MESSAGERESPONSE_FIELD_NUMBER = 7;
-    private com.aihaibara.commons.ProtoMsg.MessageResponse messageResponse_;
+    public static final int HEATBEATREQUEST_FIELD_NUMBER = 7;
+    private com.aihaibara.commons.ProtoMsg.HeatbeatRequest heatbeatRequest_;
     /**
-     * <code>optional .MessageResponse messageResponse = 7;</code>
+     * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
      */
-    public boolean hasMessageResponse() {
+    public boolean hasHeatbeatRequest() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>optional .MessageResponse messageResponse = 7;</code>
+     * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+     */
+    public com.aihaibara.commons.ProtoMsg.HeatbeatRequest getHeatbeatRequest() {
+      return heatbeatRequest_;
+    }
+    /**
+     * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+     */
+    public com.aihaibara.commons.ProtoMsg.HeatbeatRequestOrBuilder getHeatbeatRequestOrBuilder() {
+      return heatbeatRequest_;
+    }
+
+    public static final int HEATBEATRESPONSE_FIELD_NUMBER = 8;
+    private com.aihaibara.commons.ProtoMsg.HeatbeatResponse heatbeatResponse_;
+    /**
+     * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+     */
+    public boolean hasHeatbeatResponse() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+     */
+    public com.aihaibara.commons.ProtoMsg.HeatbeatResponse getHeatbeatResponse() {
+      return heatbeatResponse_;
+    }
+    /**
+     * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+     */
+    public com.aihaibara.commons.ProtoMsg.HeatbeatResponseOrBuilder getHeatbeatResponseOrBuilder() {
+      return heatbeatResponse_;
+    }
+
+    public static final int MESSAGERESPONSE_FIELD_NUMBER = 9;
+    private com.aihaibara.commons.ProtoMsg.MessageResponse messageResponse_;
+    /**
+     * <code>optional .MessageResponse messageResponse = 9;</code>
+     */
+    public boolean hasMessageResponse() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional .MessageResponse messageResponse = 9;</code>
      */
     public com.aihaibara.commons.ProtoMsg.MessageResponse getMessageResponse() {
       return messageResponse_;
     }
     /**
-     * <code>optional .MessageResponse messageResponse = 7;</code>
+     * <code>optional .MessageResponse messageResponse = 9;</code>
      */
     public com.aihaibara.commons.ProtoMsg.MessageResponseOrBuilder getMessageResponseOrBuilder() {
       return messageResponse_;
     }
 
-    public static final int NOTIFICATION_FIELD_NUMBER = 8;
+    public static final int NOTIFICATION_FIELD_NUMBER = 10;
     private com.aihaibara.commons.ProtoMsg.MessageNotification notification_;
     /**
-     * <code>optional .MessageNotification notification = 8;</code>
+     * <code>optional .MessageNotification notification = 10;</code>
      */
     public boolean hasNotification() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
+      return ((bitField0_ & 0x00000200) == 0x00000200);
     }
     /**
-     * <code>optional .MessageNotification notification = 8;</code>
+     * <code>optional .MessageNotification notification = 10;</code>
      */
     public com.aihaibara.commons.ProtoMsg.MessageNotification getNotification() {
       return notification_;
     }
     /**
-     * <code>optional .MessageNotification notification = 8;</code>
+     * <code>optional .MessageNotification notification = 10;</code>
      */
     public com.aihaibara.commons.ProtoMsg.MessageNotificationOrBuilder getNotificationOrBuilder() {
       return notification_;
@@ -5846,6 +7410,8 @@ public final class ProtoMsg {
       loginRequest_ = com.aihaibara.commons.ProtoMsg.LoginRequest.getDefaultInstance();
       loginResponse_ = com.aihaibara.commons.ProtoMsg.LoginResponse.getDefaultInstance();
       messageRequest_ = com.aihaibara.commons.ProtoMsg.MessageRequest.getDefaultInstance();
+      heatbeatRequest_ = com.aihaibara.commons.ProtoMsg.HeatbeatRequest.getDefaultInstance();
+      heatbeatResponse_ = com.aihaibara.commons.ProtoMsg.HeatbeatResponse.getDefaultInstance();
       messageResponse_ = com.aihaibara.commons.ProtoMsg.MessageResponse.getDefaultInstance();
       notification_ = com.aihaibara.commons.ProtoMsg.MessageNotification.getDefaultInstance();
     }
@@ -5881,6 +7447,18 @@ public final class ProtoMsg {
       }
       if (hasMessageRequest()) {
         if (!getMessageRequest().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasHeatbeatRequest()) {
+        if (!getHeatbeatRequest().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasHeatbeatResponse()) {
+        if (!getHeatbeatResponse().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -5923,10 +7501,16 @@ public final class ProtoMsg {
         output.writeMessage(6, messageRequest_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeMessage(7, messageResponse_);
+        output.writeMessage(7, heatbeatRequest_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeMessage(8, notification_);
+        output.writeMessage(8, heatbeatResponse_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeMessage(9, messageResponse_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeMessage(10, notification_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5963,11 +7547,19 @@ public final class ProtoMsg {
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, messageResponse_);
+          .computeMessageSize(7, heatbeatRequest_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, notification_);
+          .computeMessageSize(8, heatbeatResponse_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, messageResponse_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, notification_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -6081,6 +7673,8 @@ public final class ProtoMsg {
           getLoginRequestFieldBuilder();
           getLoginResponseFieldBuilder();
           getMessageRequestFieldBuilder();
+          getHeatbeatRequestFieldBuilder();
+          getHeatbeatResponseFieldBuilder();
           getMessageResponseFieldBuilder();
           getNotificationFieldBuilder();
         }
@@ -6115,18 +7709,30 @@ public final class ProtoMsg {
           messageRequestBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
+        if (heatbeatRequestBuilder_ == null) {
+          heatbeatRequest_ = com.aihaibara.commons.ProtoMsg.HeatbeatRequest.getDefaultInstance();
+        } else {
+          heatbeatRequestBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (heatbeatResponseBuilder_ == null) {
+          heatbeatResponse_ = com.aihaibara.commons.ProtoMsg.HeatbeatResponse.getDefaultInstance();
+        } else {
+          heatbeatResponseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
         if (messageResponseBuilder_ == null) {
           messageResponse_ = com.aihaibara.commons.ProtoMsg.MessageResponse.getDefaultInstance();
         } else {
           messageResponseBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000100);
         if (notificationBuilder_ == null) {
           notification_ = com.aihaibara.commons.ProtoMsg.MessageNotification.getDefaultInstance();
         } else {
           notificationBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -6194,13 +7800,29 @@ public final class ProtoMsg {
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
+        if (heatbeatRequestBuilder_ == null) {
+          result.heatbeatRequest_ = heatbeatRequest_;
+        } else {
+          result.heatbeatRequest_ = heatbeatRequestBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        if (heatbeatResponseBuilder_ == null) {
+          result.heatbeatResponse_ = heatbeatResponse_;
+        } else {
+          result.heatbeatResponse_ = heatbeatResponseBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
         if (messageResponseBuilder_ == null) {
           result.messageResponse_ = messageResponse_;
         } else {
           result.messageResponse_ = messageResponseBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
-          to_bitField0_ |= 0x00000080;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
         }
         if (notificationBuilder_ == null) {
           result.notification_ = notification_;
@@ -6243,6 +7865,12 @@ public final class ProtoMsg {
         if (other.hasMessageRequest()) {
           mergeMessageRequest(other.getMessageRequest());
         }
+        if (other.hasHeatbeatRequest()) {
+          mergeHeatbeatRequest(other.getHeatbeatRequest());
+        }
+        if (other.hasHeatbeatResponse()) {
+          mergeHeatbeatResponse(other.getHeatbeatResponse());
+        }
         if (other.hasMessageResponse()) {
           mergeMessageResponse(other.getMessageResponse());
         }
@@ -6280,6 +7908,18 @@ public final class ProtoMsg {
         }
         if (hasMessageRequest()) {
           if (!getMessageRequest().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasHeatbeatRequest()) {
+          if (!getHeatbeatRequest().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasHeatbeatResponse()) {
+          if (!getHeatbeatResponse().isInitialized()) {
             
             return false;
           }
@@ -6809,17 +8449,249 @@ public final class ProtoMsg {
         return messageRequestBuilder_;
       }
 
+      private com.aihaibara.commons.ProtoMsg.HeatbeatRequest heatbeatRequest_ = com.aihaibara.commons.ProtoMsg.HeatbeatRequest.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.aihaibara.commons.ProtoMsg.HeatbeatRequest, com.aihaibara.commons.ProtoMsg.HeatbeatRequest.Builder, com.aihaibara.commons.ProtoMsg.HeatbeatRequestOrBuilder> heatbeatRequestBuilder_;
+      /**
+       * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+       */
+      public boolean hasHeatbeatRequest() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+       */
+      public com.aihaibara.commons.ProtoMsg.HeatbeatRequest getHeatbeatRequest() {
+        if (heatbeatRequestBuilder_ == null) {
+          return heatbeatRequest_;
+        } else {
+          return heatbeatRequestBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+       */
+      public Builder setHeatbeatRequest(com.aihaibara.commons.ProtoMsg.HeatbeatRequest value) {
+        if (heatbeatRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          heatbeatRequest_ = value;
+          onChanged();
+        } else {
+          heatbeatRequestBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+       */
+      public Builder setHeatbeatRequest(
+          com.aihaibara.commons.ProtoMsg.HeatbeatRequest.Builder builderForValue) {
+        if (heatbeatRequestBuilder_ == null) {
+          heatbeatRequest_ = builderForValue.build();
+          onChanged();
+        } else {
+          heatbeatRequestBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+       */
+      public Builder mergeHeatbeatRequest(com.aihaibara.commons.ProtoMsg.HeatbeatRequest value) {
+        if (heatbeatRequestBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
+              heatbeatRequest_ != com.aihaibara.commons.ProtoMsg.HeatbeatRequest.getDefaultInstance()) {
+            heatbeatRequest_ =
+              com.aihaibara.commons.ProtoMsg.HeatbeatRequest.newBuilder(heatbeatRequest_).mergeFrom(value).buildPartial();
+          } else {
+            heatbeatRequest_ = value;
+          }
+          onChanged();
+        } else {
+          heatbeatRequestBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+       */
+      public Builder clearHeatbeatRequest() {
+        if (heatbeatRequestBuilder_ == null) {
+          heatbeatRequest_ = com.aihaibara.commons.ProtoMsg.HeatbeatRequest.getDefaultInstance();
+          onChanged();
+        } else {
+          heatbeatRequestBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+      /**
+       * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+       */
+      public com.aihaibara.commons.ProtoMsg.HeatbeatRequest.Builder getHeatbeatRequestBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getHeatbeatRequestFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+       */
+      public com.aihaibara.commons.ProtoMsg.HeatbeatRequestOrBuilder getHeatbeatRequestOrBuilder() {
+        if (heatbeatRequestBuilder_ != null) {
+          return heatbeatRequestBuilder_.getMessageOrBuilder();
+        } else {
+          return heatbeatRequest_;
+        }
+      }
+      /**
+       * <code>optional .HeatbeatRequest heatbeatRequest = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.aihaibara.commons.ProtoMsg.HeatbeatRequest, com.aihaibara.commons.ProtoMsg.HeatbeatRequest.Builder, com.aihaibara.commons.ProtoMsg.HeatbeatRequestOrBuilder> 
+          getHeatbeatRequestFieldBuilder() {
+        if (heatbeatRequestBuilder_ == null) {
+          heatbeatRequestBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.aihaibara.commons.ProtoMsg.HeatbeatRequest, com.aihaibara.commons.ProtoMsg.HeatbeatRequest.Builder, com.aihaibara.commons.ProtoMsg.HeatbeatRequestOrBuilder>(
+                  getHeatbeatRequest(),
+                  getParentForChildren(),
+                  isClean());
+          heatbeatRequest_ = null;
+        }
+        return heatbeatRequestBuilder_;
+      }
+
+      private com.aihaibara.commons.ProtoMsg.HeatbeatResponse heatbeatResponse_ = com.aihaibara.commons.ProtoMsg.HeatbeatResponse.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.aihaibara.commons.ProtoMsg.HeatbeatResponse, com.aihaibara.commons.ProtoMsg.HeatbeatResponse.Builder, com.aihaibara.commons.ProtoMsg.HeatbeatResponseOrBuilder> heatbeatResponseBuilder_;
+      /**
+       * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+       */
+      public boolean hasHeatbeatResponse() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+       */
+      public com.aihaibara.commons.ProtoMsg.HeatbeatResponse getHeatbeatResponse() {
+        if (heatbeatResponseBuilder_ == null) {
+          return heatbeatResponse_;
+        } else {
+          return heatbeatResponseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+       */
+      public Builder setHeatbeatResponse(com.aihaibara.commons.ProtoMsg.HeatbeatResponse value) {
+        if (heatbeatResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          heatbeatResponse_ = value;
+          onChanged();
+        } else {
+          heatbeatResponseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+       */
+      public Builder setHeatbeatResponse(
+          com.aihaibara.commons.ProtoMsg.HeatbeatResponse.Builder builderForValue) {
+        if (heatbeatResponseBuilder_ == null) {
+          heatbeatResponse_ = builderForValue.build();
+          onChanged();
+        } else {
+          heatbeatResponseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+       */
+      public Builder mergeHeatbeatResponse(com.aihaibara.commons.ProtoMsg.HeatbeatResponse value) {
+        if (heatbeatResponseBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+              heatbeatResponse_ != com.aihaibara.commons.ProtoMsg.HeatbeatResponse.getDefaultInstance()) {
+            heatbeatResponse_ =
+              com.aihaibara.commons.ProtoMsg.HeatbeatResponse.newBuilder(heatbeatResponse_).mergeFrom(value).buildPartial();
+          } else {
+            heatbeatResponse_ = value;
+          }
+          onChanged();
+        } else {
+          heatbeatResponseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+       */
+      public Builder clearHeatbeatResponse() {
+        if (heatbeatResponseBuilder_ == null) {
+          heatbeatResponse_ = com.aihaibara.commons.ProtoMsg.HeatbeatResponse.getDefaultInstance();
+          onChanged();
+        } else {
+          heatbeatResponseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+      /**
+       * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+       */
+      public com.aihaibara.commons.ProtoMsg.HeatbeatResponse.Builder getHeatbeatResponseBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getHeatbeatResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+       */
+      public com.aihaibara.commons.ProtoMsg.HeatbeatResponseOrBuilder getHeatbeatResponseOrBuilder() {
+        if (heatbeatResponseBuilder_ != null) {
+          return heatbeatResponseBuilder_.getMessageOrBuilder();
+        } else {
+          return heatbeatResponse_;
+        }
+      }
+      /**
+       * <code>optional .HeatbeatResponse heatbeatResponse = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.aihaibara.commons.ProtoMsg.HeatbeatResponse, com.aihaibara.commons.ProtoMsg.HeatbeatResponse.Builder, com.aihaibara.commons.ProtoMsg.HeatbeatResponseOrBuilder> 
+          getHeatbeatResponseFieldBuilder() {
+        if (heatbeatResponseBuilder_ == null) {
+          heatbeatResponseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.aihaibara.commons.ProtoMsg.HeatbeatResponse, com.aihaibara.commons.ProtoMsg.HeatbeatResponse.Builder, com.aihaibara.commons.ProtoMsg.HeatbeatResponseOrBuilder>(
+                  getHeatbeatResponse(),
+                  getParentForChildren(),
+                  isClean());
+          heatbeatResponse_ = null;
+        }
+        return heatbeatResponseBuilder_;
+      }
+
       private com.aihaibara.commons.ProtoMsg.MessageResponse messageResponse_ = com.aihaibara.commons.ProtoMsg.MessageResponse.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.aihaibara.commons.ProtoMsg.MessageResponse, com.aihaibara.commons.ProtoMsg.MessageResponse.Builder, com.aihaibara.commons.ProtoMsg.MessageResponseOrBuilder> messageResponseBuilder_;
       /**
-       * <code>optional .MessageResponse messageResponse = 7;</code>
+       * <code>optional .MessageResponse messageResponse = 9;</code>
        */
       public boolean hasMessageResponse() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
+        return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
-       * <code>optional .MessageResponse messageResponse = 7;</code>
+       * <code>optional .MessageResponse messageResponse = 9;</code>
        */
       public com.aihaibara.commons.ProtoMsg.MessageResponse getMessageResponse() {
         if (messageResponseBuilder_ == null) {
@@ -6829,7 +8701,7 @@ public final class ProtoMsg {
         }
       }
       /**
-       * <code>optional .MessageResponse messageResponse = 7;</code>
+       * <code>optional .MessageResponse messageResponse = 9;</code>
        */
       public Builder setMessageResponse(com.aihaibara.commons.ProtoMsg.MessageResponse value) {
         if (messageResponseBuilder_ == null) {
@@ -6841,11 +8713,11 @@ public final class ProtoMsg {
         } else {
           messageResponseBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
-       * <code>optional .MessageResponse messageResponse = 7;</code>
+       * <code>optional .MessageResponse messageResponse = 9;</code>
        */
       public Builder setMessageResponse(
           com.aihaibara.commons.ProtoMsg.MessageResponse.Builder builderForValue) {
@@ -6855,15 +8727,15 @@ public final class ProtoMsg {
         } else {
           messageResponseBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
-       * <code>optional .MessageResponse messageResponse = 7;</code>
+       * <code>optional .MessageResponse messageResponse = 9;</code>
        */
       public Builder mergeMessageResponse(com.aihaibara.commons.ProtoMsg.MessageResponse value) {
         if (messageResponseBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040) &&
+          if (((bitField0_ & 0x00000100) == 0x00000100) &&
               messageResponse_ != com.aihaibara.commons.ProtoMsg.MessageResponse.getDefaultInstance()) {
             messageResponse_ =
               com.aihaibara.commons.ProtoMsg.MessageResponse.newBuilder(messageResponse_).mergeFrom(value).buildPartial();
@@ -6874,11 +8746,11 @@ public final class ProtoMsg {
         } else {
           messageResponseBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
-       * <code>optional .MessageResponse messageResponse = 7;</code>
+       * <code>optional .MessageResponse messageResponse = 9;</code>
        */
       public Builder clearMessageResponse() {
         if (messageResponseBuilder_ == null) {
@@ -6887,19 +8759,19 @@ public final class ProtoMsg {
         } else {
           messageResponseBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
       /**
-       * <code>optional .MessageResponse messageResponse = 7;</code>
+       * <code>optional .MessageResponse messageResponse = 9;</code>
        */
       public com.aihaibara.commons.ProtoMsg.MessageResponse.Builder getMessageResponseBuilder() {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000100;
         onChanged();
         return getMessageResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .MessageResponse messageResponse = 7;</code>
+       * <code>optional .MessageResponse messageResponse = 9;</code>
        */
       public com.aihaibara.commons.ProtoMsg.MessageResponseOrBuilder getMessageResponseOrBuilder() {
         if (messageResponseBuilder_ != null) {
@@ -6909,7 +8781,7 @@ public final class ProtoMsg {
         }
       }
       /**
-       * <code>optional .MessageResponse messageResponse = 7;</code>
+       * <code>optional .MessageResponse messageResponse = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.aihaibara.commons.ProtoMsg.MessageResponse, com.aihaibara.commons.ProtoMsg.MessageResponse.Builder, com.aihaibara.commons.ProtoMsg.MessageResponseOrBuilder> 
@@ -6929,13 +8801,13 @@ public final class ProtoMsg {
       private com.google.protobuf.SingleFieldBuilder<
           com.aihaibara.commons.ProtoMsg.MessageNotification, com.aihaibara.commons.ProtoMsg.MessageNotification.Builder, com.aihaibara.commons.ProtoMsg.MessageNotificationOrBuilder> notificationBuilder_;
       /**
-       * <code>optional .MessageNotification notification = 8;</code>
+       * <code>optional .MessageNotification notification = 10;</code>
        */
       public boolean hasNotification() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
+        return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
-       * <code>optional .MessageNotification notification = 8;</code>
+       * <code>optional .MessageNotification notification = 10;</code>
        */
       public com.aihaibara.commons.ProtoMsg.MessageNotification getNotification() {
         if (notificationBuilder_ == null) {
@@ -6945,7 +8817,7 @@ public final class ProtoMsg {
         }
       }
       /**
-       * <code>optional .MessageNotification notification = 8;</code>
+       * <code>optional .MessageNotification notification = 10;</code>
        */
       public Builder setNotification(com.aihaibara.commons.ProtoMsg.MessageNotification value) {
         if (notificationBuilder_ == null) {
@@ -6957,11 +8829,11 @@ public final class ProtoMsg {
         } else {
           notificationBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
         return this;
       }
       /**
-       * <code>optional .MessageNotification notification = 8;</code>
+       * <code>optional .MessageNotification notification = 10;</code>
        */
       public Builder setNotification(
           com.aihaibara.commons.ProtoMsg.MessageNotification.Builder builderForValue) {
@@ -6971,15 +8843,15 @@ public final class ProtoMsg {
         } else {
           notificationBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
         return this;
       }
       /**
-       * <code>optional .MessageNotification notification = 8;</code>
+       * <code>optional .MessageNotification notification = 10;</code>
        */
       public Builder mergeNotification(com.aihaibara.commons.ProtoMsg.MessageNotification value) {
         if (notificationBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+          if (((bitField0_ & 0x00000200) == 0x00000200) &&
               notification_ != com.aihaibara.commons.ProtoMsg.MessageNotification.getDefaultInstance()) {
             notification_ =
               com.aihaibara.commons.ProtoMsg.MessageNotification.newBuilder(notification_).mergeFrom(value).buildPartial();
@@ -6990,11 +8862,11 @@ public final class ProtoMsg {
         } else {
           notificationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
         return this;
       }
       /**
-       * <code>optional .MessageNotification notification = 8;</code>
+       * <code>optional .MessageNotification notification = 10;</code>
        */
       public Builder clearNotification() {
         if (notificationBuilder_ == null) {
@@ -7003,19 +8875,19 @@ public final class ProtoMsg {
         } else {
           notificationBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
       /**
-       * <code>optional .MessageNotification notification = 8;</code>
+       * <code>optional .MessageNotification notification = 10;</code>
        */
       public com.aihaibara.commons.ProtoMsg.MessageNotification.Builder getNotificationBuilder() {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
         onChanged();
         return getNotificationFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .MessageNotification notification = 8;</code>
+       * <code>optional .MessageNotification notification = 10;</code>
        */
       public com.aihaibara.commons.ProtoMsg.MessageNotificationOrBuilder getNotificationOrBuilder() {
         if (notificationBuilder_ != null) {
@@ -7025,7 +8897,7 @@ public final class ProtoMsg {
         }
       }
       /**
-       * <code>optional .MessageNotification notification = 8;</code>
+       * <code>optional .MessageNotification notification = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.aihaibara.commons.ProtoMsg.MessageNotification, com.aihaibara.commons.ProtoMsg.MessageNotification.Builder, com.aihaibara.commons.ProtoMsg.MessageNotificationOrBuilder> 
@@ -7052,6 +8924,16 @@ public final class ProtoMsg {
     // @@protoc_insertion_point(class_scope:Message)
   }
 
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_HeatbeatRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_HeatbeatRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_HeatbeatResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_HeatbeatResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_LoginRequest_descriptor;
   private static
@@ -7091,34 +8973,39 @@ public final class ProtoMsg {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024proto/ProtoMsg.proto\"c\n\014LoginRequest\022\013" +
-      "\n\003uid\030\001 \002(\t\022\020\n\010deviceId\030\002 \002(\t\022\r\n\005token\030\003" +
-      " \002(\t\022\020\n\010platform\030\004 \001(\r\022\023\n\013app_version\030\005 " +
-      "\001(\t\"K\n\rLoginResponse\022\016\n\006result\030\001 \002(\010\022\014\n\004" +
-      "code\030\002 \002(\r\022\014\n\004info\030\003 \002(\t\022\016\n\006expose\030\004 \002(\r" +
-      "\"\253\001\n\016MessageRequest\022\016\n\006msg_id\030\001 \002(\004\022\014\n\004f" +
-      "rom\030\002 \002(\t\022\n\n\002to\030\003 \002(\t\022\014\n\004time\030\004 \002(\004\022\020\n\010m" +
-      "sg_type\030\005 \002(\r\022\017\n\007content\030\006 \002(\t\022\013\n\003url\030\010 " +
-      "\001(\t\022\020\n\010property\030\t \001(\t\022\021\n\tfrom_nick\030\n \001(\t" +
-      "\022\014\n\004json\030\013 \001(\t\"v\n\017MessageResponse\022\016\n\006res",
-      "ult\030\001 \002(\010\022\014\n\004code\030\002 \002(\r\022\014\n\004info\030\003 \002(\t\022\016\n" +
-      "\006expose\030\004 \002(\r\022\022\n\nlast_block\030\005 \002(\010\022\023\n\013blo" +
-      "ck_index\030\006 \002(\007\"X\n\023MessageNotification\022\020\n" +
-      "\010msg_type\030\001 \002(\r\022\016\n\006sender\030\002 \002(\014\022\014\n\004json\030" +
-      "\003 \002(\t\022\021\n\ttimestamp\030\004 \002(\t\"\224\002\n\007Message\022\027\n\004" +
-      "type\030\001 \002(\0162\t.HeadType\022\020\n\010sequence\030\002 \002(\004\022" +
-      "\022\n\nsession_id\030\003 \002(\t\022#\n\014loginRequest\030\004 \001(" +
-      "\0132\r.LoginRequest\022%\n\rloginResponse\030\005 \001(\0132" +
-      "\016.LoginResponse\022\'\n\016messageRequest\030\006 \001(\0132" +
-      "\017.MessageRequest\022)\n\017messageResponse\030\007 \001(",
-      "\0132\020.MessageResponse\022*\n\014notification\030\010 \001(" +
-      "\0132\024.MessageNotification*\314\001\n\010HeadType\022\021\n\r" +
-      "LOGIN_REQUEST\020\001\022\022\n\016LOGIN_RESPONSE\020\002\022\022\n\016L" +
-      "OGOUT_REQUEST\020\003\022\023\n\017LOGOUT_RESPONSE\020\004\022\024\n\020" +
-      "HEATBEAT_REQUEST\020\005\022\025\n\021HEATBEAT_RESPONSE\020" +
-      "\006\022\023\n\017MESSAGE_REQUEST\020\007\022\024\n\020MESSAGE_RESPON" +
-      "SE\020\010\022\030\n\024MESSAGE_NOTIFICATION\020\tB!\n\025com.ai" +
-      "haibara.commonsB\010ProtoMsg"
+      "\n\024proto/ProtoMsg.proto\"9\n\017HeatbeatReques" +
+      "t\022\013\n\003seq\030\001 \002(\r\022\013\n\003uid\030\002 \002(\t\022\014\n\004json\030\003 \002(" +
+      "\t\":\n\020HeatbeatResponse\022\013\n\003seq\030\001 \002(\r\022\013\n\003ui" +
+      "d\030\002 \002(\t\022\014\n\004json\030\003 \002(\t\"c\n\014LoginRequest\022\013\n" +
+      "\003uid\030\001 \002(\t\022\020\n\010deviceId\030\002 \002(\t\022\r\n\005token\030\003 " +
+      "\002(\t\022\020\n\010platform\030\004 \001(\r\022\023\n\013app_version\030\005 \001" +
+      "(\t\"K\n\rLoginResponse\022\016\n\006result\030\001 \002(\010\022\014\n\004c" +
+      "ode\030\002 \002(\r\022\014\n\004info\030\003 \002(\t\022\016\n\006expose\030\004 \002(\r\"" +
+      "\253\001\n\016MessageRequest\022\016\n\006msg_id\030\001 \002(\004\022\014\n\004fr" +
+      "om\030\002 \002(\t\022\n\n\002to\030\003 \002(\t\022\014\n\004time\030\004 \002(\004\022\020\n\010ms",
+      "g_type\030\005 \002(\r\022\017\n\007content\030\006 \002(\t\022\013\n\003url\030\010 \001" +
+      "(\t\022\020\n\010property\030\t \001(\t\022\021\n\tfrom_nick\030\n \001(\t\022" +
+      "\014\n\004json\030\013 \001(\t\"v\n\017MessageResponse\022\016\n\006resu" +
+      "lt\030\001 \002(\010\022\014\n\004code\030\002 \002(\r\022\014\n\004info\030\003 \002(\t\022\016\n\006" +
+      "expose\030\004 \002(\r\022\022\n\nlast_block\030\005 \002(\010\022\023\n\013bloc" +
+      "k_index\030\006 \002(\007\"X\n\023MessageNotification\022\020\n\010" +
+      "msg_type\030\001 \002(\r\022\016\n\006sender\030\002 \002(\014\022\014\n\004json\030\003" +
+      " \002(\t\022\021\n\ttimestamp\030\004 \002(\t\"\354\002\n\007Message\022\027\n\004t" +
+      "ype\030\001 \002(\0162\t.HeadType\022\020\n\010sequence\030\002 \002(\004\022\022" +
+      "\n\nsession_id\030\003 \002(\t\022#\n\014loginRequest\030\004 \001(\013",
+      "2\r.LoginRequest\022%\n\rloginResponse\030\005 \001(\0132\016" +
+      ".LoginResponse\022\'\n\016messageRequest\030\006 \001(\0132\017" +
+      ".MessageRequest\022)\n\017heatbeatRequest\030\007 \001(\013" +
+      "2\020.HeatbeatRequest\022+\n\020heatbeatResponse\030\010" +
+      " \001(\0132\021.HeatbeatResponse\022)\n\017messageRespon" +
+      "se\030\t \001(\0132\020.MessageResponse\022*\n\014notificati" +
+      "on\030\n \001(\0132\024.MessageNotification*\314\001\n\010HeadT" +
+      "ype\022\021\n\rLOGIN_REQUEST\020\001\022\022\n\016LOGIN_RESPONSE" +
+      "\020\002\022\022\n\016LOGOUT_REQUEST\020\003\022\023\n\017LOGOUT_RESPONS" +
+      "E\020\004\022\024\n\020HEATBEAT_REQUEST\020\005\022\025\n\021HEATBEAT_RE",
+      "SPONSE\020\006\022\023\n\017MESSAGE_REQUEST\020\007\022\024\n\020MESSAGE" +
+      "_RESPONSE\020\010\022\030\n\024MESSAGE_NOTIFICATION\020\tB!\n" +
+      "\025com.aihaibara.commonsB\010ProtoMsg"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7132,42 +9019,54 @@ public final class ProtoMsg {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_LoginRequest_descriptor =
+    internal_static_HeatbeatRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_HeatbeatRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_HeatbeatRequest_descriptor,
+        new java.lang.String[] { "Seq", "Uid", "Json", });
+    internal_static_HeatbeatResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_HeatbeatResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_HeatbeatResponse_descriptor,
+        new java.lang.String[] { "Seq", "Uid", "Json", });
+    internal_static_LoginRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_LoginRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_LoginRequest_descriptor,
         new java.lang.String[] { "Uid", "DeviceId", "Token", "Platform", "AppVersion", });
     internal_static_LoginResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_LoginResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_LoginResponse_descriptor,
         new java.lang.String[] { "Result", "Code", "Info", "Expose", });
     internal_static_MessageRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_MessageRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_MessageRequest_descriptor,
         new java.lang.String[] { "MsgId", "From", "To", "Time", "MsgType", "Content", "Url", "Property", "FromNick", "Json", });
     internal_static_MessageResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_MessageResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_MessageResponse_descriptor,
         new java.lang.String[] { "Result", "Code", "Info", "Expose", "LastBlock", "BlockIndex", });
     internal_static_MessageNotification_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_MessageNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_MessageNotification_descriptor,
         new java.lang.String[] { "MsgType", "Sender", "Json", "Timestamp", });
     internal_static_Message_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Message_descriptor,
-        new java.lang.String[] { "Type", "Sequence", "SessionId", "LoginRequest", "LoginResponse", "MessageRequest", "MessageResponse", "Notification", });
+        new java.lang.String[] { "Type", "Sequence", "SessionId", "LoginRequest", "LoginResponse", "MessageRequest", "HeatbeatRequest", "HeatbeatResponse", "MessageResponse", "Notification", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

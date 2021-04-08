@@ -14,7 +14,16 @@ enum HeadType
   MESSAGE_RESPONSE = 8;
   MESSAGE_NOTIFICATION = 9;
 }
-
+message HeatbeatRequest{
+    required uint32 seq = 1;
+    required string uid = 2;
+    required string json = 3;
+}
+message HeatbeatResponse{
+    required uint32 seq = 1;
+    required string uid = 2;
+    required string json = 3;
+}
 
 message LoginRequest{
 	required string uid = 1;
@@ -75,8 +84,10 @@ message Message
  optional LoginRequest loginRequest = 4;
  optional LoginResponse loginResponse = 5;
  optional MessageRequest messageRequest = 6;
- optional MessageResponse messageResponse = 7;
- optional MessageNotification notification = 8;
+ optional HeatbeatRequest heatbeatRequest = 7;
+ optional HeatbeatResponse heatbeatResponse = 8;
+ optional MessageResponse messageResponse = 9;
+ optional MessageNotification notification = 10;
 }
 
 

@@ -6,7 +6,6 @@ import com.aihaibara.commons.bean.User;
 import com.aihaibara.server.protoBuilder.LoginResponceBuilder;
 import com.aihaibara.server.server.ServerSession;
 import com.aihaibara.server.server.SessionMap;
-import io.netty.channel.ChannelHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

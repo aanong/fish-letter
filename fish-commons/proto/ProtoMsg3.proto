@@ -24,11 +24,22 @@ message ProtoMsg {
         string app_version = 5;
     }
 
+
     message LoginResponse {
         bool result = 1;
         uint32 code = 2;
         string info = 3;
         uint32 expose = 4;
+    }
+    message HeatbeatRequest{
+        required uint32 seq = 1;
+        required string uid = 2;
+        required string json = 3;
+    }
+    message HeatbeatResponse{
+        required uint32 seq = 1;
+        required string uid = 2;
+        required string json = 3;
     }
 
 

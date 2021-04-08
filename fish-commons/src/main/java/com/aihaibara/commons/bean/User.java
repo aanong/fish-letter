@@ -1,7 +1,6 @@
 package com.aihaibara.commons.bean;
 
 
-
 import com.aihaibara.commons.ProtoMsg;
 import lombok.Data;
 
