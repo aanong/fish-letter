@@ -2,6 +2,7 @@ package com.aihaibara.client;
 
 import com.aihaibara.commons.ProtoMsg;
 import com.aihaibara.commons.bean.User;
+import com.aihaibara.commons.bean.UserDTO;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
@@ -28,7 +29,7 @@ public class ClientSession {
      * 用户实现客户端会话管理的核心
      */
     private Channel channel;
-    private User user;
+    private UserDTO user ;
 
     /**
      * 保存登录后的服务端sessionid

@@ -1,6 +1,8 @@
 package com.aihaibara.client;
 
 
+import com.aihaibara.ClientSender.ChatSender;
+import com.aihaibara.ClientSender.LoginSender;
 import com.aihaibara.commons.codec.ProtobufDecoder;
 import com.aihaibara.commons.codec.ProtobufEncoder;
 import com.aihaibara.handler.ChatMsgHandler;
@@ -43,9 +45,9 @@ public class NettyClient  {
     private ExceptionHandler exceptionHandler;
 //
 //
-//    private Channel channel;
-//    private ChatSender sender;
-//    private LoginSender l;
+    private Channel channel;
+    private ChatSender sender;
+    private LoginSender l;
 
     private EventLoopGroup g;
     Bootstrap bootstrap ;
@@ -80,9 +82,9 @@ public class NettyClient  {
                 public void initChannel(SocketChannel ch) {
                     ch.pipeline().addLast("decoder", new ProtobufDecoder());
                     ch.pipeline().addLast("encoder", new ProtobufEncoder());
-                    ch.pipeline().addLast(null);
-                    ch.pipeline().addLast(null);
-                    ch.pipeline().addLast(null);
+                    ch.pipeline().addLast("loginResponseHandler",loginResponceHandler);
+                    ch.pipeline().addLast("chatMsgHandler",chatMsgHandler);
+                    ch.pipeline().addLast("exceptionHandler",exceptionHandler);
                 }
             });
             log.info("客户端连接 [鱼书IM]");

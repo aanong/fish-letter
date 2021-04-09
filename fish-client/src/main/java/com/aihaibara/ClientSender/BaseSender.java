@@ -6,6 +6,7 @@ import com.aihaibara.client.CommandController;
 import com.aihaibara.cocurrent.CallbackTask;
 import com.aihaibara.cocurrent.CallbackTaskScheduler;
 import com.aihaibara.commons.ProtoMsg;
+import com.aihaibara.commons.bean.UserDTO;
 import io.netty.channel.ChannelFuture;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
@@ -18,7 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public abstract class BaseSender {
 
 
-   // private UserDTO user;
+    private UserDTO user;
     private ClientSession session;
 
     @Autowired

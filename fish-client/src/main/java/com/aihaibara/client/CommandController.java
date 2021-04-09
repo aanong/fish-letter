@@ -1,8 +1,11 @@
 package com.aihaibara.client;
 
+import com.aihaibara.ClientSender.ChatSender;
+import com.aihaibara.ClientSender.LoginSender;
 import com.aihaibara.clientCommand.*;
 import com.aihaibara.cocurrent.FutureTaskScheduler;
 import com.aihaibara.commons.bean.User;
+import com.aihaibara.commons.bean.UserDTO;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoop;
@@ -47,16 +50,16 @@ public class CommandController {
     private NettyClient nettyClient;
 
     private Channel channel;
+
+    @Autowired
+    private ChatSender chatSender;
 //
-//    @Autowired
-//    private ChatSender chatSender;
-//
-//    @Autowired
-//    private LoginSender loginSender;
+    @Autowired
+    private LoginSender loginSender;
 
 
     private boolean connectFlag = false;
-    private User user;
+    private UserDTO user;
 
     GenericFutureListener<ChannelFuture> closeListener = (ChannelFuture f) ->
     {
@@ -217,9 +220,9 @@ public class CommandController {
             log.info("还没有登录，请先登录");
             return;
         }
-//        chatSender.setSession(session);
-//        chatSender.setUser(user);
-//        chatSender.sendChatMsg(c.getToUserId(), c.getMessage());
+        chatSender.setSession(session);
+        chatSender.setUser(user);
+        chatSender.sendChatMsg(c.getToUserId(), c.getMessage());
 
 
     }
@@ -230,15 +233,27 @@ public class CommandController {
             log.info("连接异常，请重新建立连接");
             return;
         }
-        User user = new User();
-        user.setUid(command.getUserName());
+        UserDTO user = new UserDTO();
+        user.setUserId(command.getUserName());
         user.setToken(command.getPassword());
         user.setDevId("1111");
         this.user = user;
         session.setUser(user);
-//        loginSender.setUser(user);
-//        loginSender.setSession(session);
-//        loginSender.sendLoginMsg();
+
+
+
+
+
+
+
+
+
+
+
+
+        loginSender.setUser(user);
+        loginSender.setSession(session);
+        loginSender.sendLoginMsg();
     }
 
 
