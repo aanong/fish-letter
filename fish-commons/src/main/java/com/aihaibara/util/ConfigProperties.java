@@ -47,6 +47,7 @@ public class ConfigProperties {
     /**
      * 按key获取值
      *
+     *
      * @param key
      * @return
      */
