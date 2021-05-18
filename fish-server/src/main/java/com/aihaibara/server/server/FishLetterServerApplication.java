@@ -29,5 +29,6 @@ public class FishLetterServerApplication {
         ChatServer nettyServer =
                 context.getBean(ChatServer.class);
         nettyServer.run();
+        System.out.println("启动成功！！！");
     }
 }

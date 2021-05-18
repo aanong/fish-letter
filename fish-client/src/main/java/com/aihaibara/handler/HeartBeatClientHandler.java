@@ -3,6 +3,7 @@ package com.aihaibara.handler;
 import com.aihaibara.client.ClientSession;
 import com.aihaibara.commons.ProtoMsg;
 import com.aihaibara.commons.bean.User;
+import com.aihaibara.commons.bean.UserDTO;
 import com.aihaibara.protoBuilder.HeartBeatMsgBuilder;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
@@ -24,7 +25,7 @@ public class HeartBeatClientHandler  extends ChannelInboundHandlerAdapter {
     public void handlerAdded(ChannelHandlerContext ctx)
             throws Exception {
         ClientSession session = ClientSession.getSession(ctx);
-        User user = session.getUser();
+        UserDTO user = session.getUser();
         HeartBeatMsgBuilder builder =
                 new HeartBeatMsgBuilder(user, session);
 

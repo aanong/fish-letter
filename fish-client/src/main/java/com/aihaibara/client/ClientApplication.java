@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 @EnableAutoConfiguration
 //使包路径下带有@Value的注解自动注入
 //使包路径下带有@Autowired的类可以自动注入
-@ComponentScan("com.im.imClient")
+@ComponentScan("com.aihaibara")
 @SpringBootApplication
 
 public class ClientApplication {
