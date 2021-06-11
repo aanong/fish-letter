@@ -26,8 +26,8 @@ public class FishLetterServerApplication {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(FishLetterServerApplication.class);
 
-        ChatServer nettyServer =
-                context.getBean(ChatServer.class);
+        FishServer nettyServer =
+                context.getBean(FishServer.class);
         nettyServer.run();
         System.out.println("启动成功！！！");
     }

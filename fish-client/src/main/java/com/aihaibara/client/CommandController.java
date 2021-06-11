@@ -140,12 +140,14 @@ public class CommandController {
 
 
     public void startConnectServer() {
+        nettyClient.setConnectedListener(connectedListener);
+        nettyClient.doConnect();
 
-        FutureTaskScheduler.add(() ->
-        {
-            nettyClient.setConnectedListener(connectedListener);
-            nettyClient.doConnect();
-        });
+//        FutureTaskScheduler.add(() ->
+//        {
+//            nettyClient.setConnectedListener(connectedListener);
+//            nettyClient.doConnect();
+//        });
     }
 
 
@@ -174,6 +176,7 @@ public class CommandController {
             //建立连接
             while (connectFlag == false) {
                 //开始连接
+
                 startConnectServer();
                 waitCommandThread();
 
