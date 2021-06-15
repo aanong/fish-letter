@@ -36,17 +36,22 @@ public class FishServer {
 
     //启动
     public void run(){
-        //1 reactor 线程
-        b.group(bg,wg);
-        //2 nio类型的channel
-        b.channel(NioServerSocketChannel.class);
-        // 监听端口
-        b.localAddress(new InetSocketAddress(port));
+        try {
+            //1 reactor 线程
+            b.group(bg,wg);
+            //2 nio类型的channel
+            b.channel(NioServerSocketChannel.class);
+            // 监听端口
+            b.localAddress(new InetSocketAddress(port));
 
-        //4 通道选项
-        b.option(ChannelOption.SO_KEEPALIVE, true);
-        b.option(ChannelOption.ALLOCATOR,
-                PooledByteBufAllocator.DEFAULT);
+            //4 通道选项
+            b.option(ChannelOption.SO_KEEPALIVE, true);
+            b.option(ChannelOption.ALLOCATOR,
+                    PooledByteBufAllocator.DEFAULT);
+        } finally {
+
+        }
+
 
     }
 }
