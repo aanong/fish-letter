@@ -32,18 +32,33 @@ public class MyServerHander extends SimpleChannelInboundHandler<String> {
         group.add(channel);
     }
 
+    /**
+     * 删除
+     * @param ctx
+     * @throws Exception
+     */
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
         Channel channel = ctx.channel();
         group.writeAndFlush("【服务器】-"+channel.remoteAddress()+"离开\n");
     }
 
+    /**
+     * 活动
+     * @param ctx
+     * @throws Exception
+     */
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         Channel channel = ctx.channel();
         System.out.println(channel.remoteAddress()+"上线\n");
     }
 
+    /**
+     * 不活跃 退出
+     * @param ctx
+     * @throws Exception
+     */
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         Channel channel = ctx.channel();
